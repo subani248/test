@@ -1,0 +1,12 @@
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.json({ message: "Hello from Express without vercel.json!" });
+});
+
+app.get("/about", (req, res) => {
+  res.json({ info: "Deployed without vercel.json file" });
+});
+
+module.exports = app;
